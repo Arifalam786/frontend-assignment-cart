@@ -1,3 +1,11 @@
+# I have used #product.js as local api and stored all the data in it
+
+# fectched all the data from product.js into prod.js file using map and
+# sent all the data into the item.js file and styled the items and all the paged.
+# at last import all the page's content into App.js file
+# Getting Started with Create React App
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
