@@ -2,9 +2,9 @@ import React from "react";
 import "./Item.css";
 import { useState } from "react";
 export const Item = ({ image, title, id, price, desc, onQuantityChange }) => {
-  const [quantity, setQuantity] = useState(1);
+  const [quantity, setQuantity] = useState(1);              // useState for quantity selection
 
-  const handleQuantitySelection = (e) => {
+  const handleQuantitySelection = (e) => {                  // handle the quantity selection
     const newQuantity = parseInt(e.target.value, 10);
     setQuantity(newQuantity);
     onQuantityChange(id, newQuantity);

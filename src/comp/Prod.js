@@ -6,16 +6,16 @@ import './Prod.css'
 
 export const Prod = () => {
 
-  const [cartItems, setCartItems] = useState(products);
+  const [cartItems, setCartItems] = useState(products);         // update the product 
 
-  const handleQuantityChange = (id, quantity) => {
+  const handleQuantityChange = (id, quantity) => {              // handle the quantity change
     const updatedCart = cartItems.map((item) =>
       item.id === id ? { ...item, quantity } : item
     );
     setCartItems(updatedCart);
   };
 
-  const calculateTotalPrice = () => {
+  const calculateTotalPrice = () => {                                 // calculate the total price of the cart
     return cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
   };
 
@@ -33,7 +33,7 @@ export const Prod = () => {
           desc={item.description}
           price={item.price}
           image={item.img}
-          onQuantityChange={handleQuantityChange}
+          onQuantityChange={handleQuantityChange}                // as the quantity changes the handleQuantityChange will be called
         />
       ))}
          <div className='total_detail_cont'>
